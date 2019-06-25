@@ -1,0 +1,44 @@
+/* Theme Name : Karma */
+
+ul#menu-karma-menu{
+    display: -webkit-inline-box;
+    float: right;
+    /* margin-left: 70%; */
+}
+#menu-karma-menu >li {
+    margin-right: 45px;
+}
+ul#menu-karma-menu a{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #222222;
+}
+ul.sub-menu {
+    display: none;
+    position: absolute;
+    width: 200px;
+    background: #ffffff;
+    
+}
+#menu-karma-menu li:hover ul.sub-menu {
+    display: block;
+}
+
+.main-nav{
+    width: 100%;
+}
+#menu-karma-menu li {
+    cursor: pointer;
+}
+ul.sub-menu li{
+    padding: 10px;
+}
+ul.sub-menu li:hover{
+    background: #ffba00 !important;
+}
+ul.sub-menu li:hover a{
+    color: #fff !important;
+    font-size: 17px !important;
+    line-height: 14px;
+}
