@@ -42,3 +42,33 @@ function wpb_custom_new_menu() {
     register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
   }
   add_action( 'init', 'wpb_custom_new_menu' );
+
+  
+  /* Custom Post Type Start */
+  function create_posttype() {
+      register_post_type( 'sliders',
+      // CPT Options
+      array(
+        'labels' => array(
+         'name' => __( 'sliders' ),
+         'singular_name' => __( 'sliders' )
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'rewrite' => array('slug' => 'sliders'),
+       )
+      );
+      }
+      // Hooking up our function to theme setup
+      add_action( 'init', 'create_posttype' );
+      /* Custom Post Type End */
+  
+  
+      add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+   
+  function add_my_post_types_to_query( $query ) {
+      if ( is_home() && $query->is_main_query() )
+          $query->set( 'post_type', array( 'post', 'sliders' ) );
+      return $query;
+  }
+  ?>

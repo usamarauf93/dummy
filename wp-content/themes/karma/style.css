@@ -42,3 +42,8 @@ ul.sub-menu li:hover a{
     font-size: 17px !important;
     line-height: 14px;
 }
+
+
+.add-bag .add-btn span {
+    -webkit-transform: none !important;
+}

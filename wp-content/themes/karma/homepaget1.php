@@ -1,3 +1,4 @@
+<?php /* Template Name: HomePageT1 */ ?>
 <?php get_header();?>
 	<!-- start banner Area -->
 	<section class="banner-area">
@@ -32,13 +33,15 @@
 								</div>
 								<div class="col-lg-7">
 									<div class="banner-img">
-										<img class="img-fluid" src="<?=  CFS()->get( 'image' ); ?>" alt="">
+										<img class="img-fluid" src="<?=  CFS()->get( 'slider_image' ); ?>" alt="">
 									</div>
 								</div>
 							</div>
 							<!-- single-slide -->
 									
 						<?php
+                                                echo 'gfgfhdf '.CFS()->get('featured_icon');
+
 						endwhile;	
 						endif;
 						?>
@@ -57,42 +60,51 @@
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="single-features">
 						<div class="f-icon">
-							<img src="<?php echo get_template_directory_uri();?>/img/features/f-icon1.png" alt="">
+                        <?php
+                        echo CFS()->get('featured_icon');
+                        //var_dump($img_id);
+
+                       ?>
+							<img src="<?= $img_id; ?>" alt="">
 						</div>
-						<h6>Free Delivery</h6>
-						<p>Free Shipping on all order</p>
+						<h6><?php echo CFS()->get('button_icon'); ?></h6>
+						<p><?=  CFS()->get( 'des_text' ); ?></p>
 					</div>
 				</div>
 				<!-- single features -->
-				<div class="col-lg-3 col-md-6 col-sm-6">
+				<!-- <div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="single-features">
 						<div class="f-icon">
-							<img src="<?php echo get_template_directory_uri();?>/img/features/f-icon2.png" alt="">
+                        <?php 
+                      
+                        // $img_url = wp_get_attachment_image_src($img_id,  'full',  false);
+                        ?>
+							<img src="<?=  CFS()->get( 'image2' ); ?>" alt="">
 						</div>
-						<h6>Return Policy</h6>
-						<p>Free Shipping on all order</p>
+						<h6><?=  CFS()->get( 'title2' ); ?></h6>
+						<p><?=  CFS()->get( 'des_text2' ); ?>der</p>
 					</div>
-				</div>
+				</div> -->
 				<!-- single features -->
-				<div class="col-lg-3 col-md-6 col-sm-6">
+				<!-- <div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="single-features">
 						<div class="f-icon">
-							<img src="<?php echo get_template_directory_uri();?>/img/features/f-icon3.png" alt="">
+							<img src="<?=  CFS()->get( 'image3' ); ?>g" alt="">
 						</div>
-						<h6>24/7 Support</h6>
-						<p>Free Shipping on all order</p>
+						<h6><?=  CFS()->get( 'title3' ); ?></h6>
+						<p><?=  CFS()->get( 'des_text3' ); ?></p>
 					</div>
-				</div>
+				</div> -->
 				<!-- single features -->
-				<div class="col-lg-3 col-md-6 col-sm-6">
+				<!-- <div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="single-features">
 						<div class="f-icon">
-							<img src="<?php echo get_template_directory_uri();?>/img/features/f-icon4.png" alt="">
+							<img src="<?=  CFS()->get( 'image4' ); ?>" alt="">
 						</div>
-						<h6>Secure Payment</h6>
-						<p>Free Shipping on all order</p>
+						<h6><?=  CFS()->get( 'title4' ); ?></h6>
+						<p><?=  CFS()->get( 'des_text4' ); ?></p>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
